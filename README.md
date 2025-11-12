@@ -52,27 +52,27 @@ from langchain_core.output_parsers import StrOutputParser
 
 ### 2. **Inicialización del modelo**
 
-    ```
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.5)
-    ```
+   ```
+   llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.5)
+   ```
 
 
 ### 3. **Creación del prompt dinámico**
 
-    ```
-    prompt = ChatPromptTemplate.from_template("Explica en dos frases el concepto de {tema}.")
-    ```
+   ```
+   prompt = ChatPromptTemplate.from_template("Explica en dos frases el concepto de {tema}.")
+   ```
 ### 4. **Construcción de la cadena**
 
-    ```
-    chain = prompt | llm | StrOutputParser()
-    ```
+   ```
+   chain = prompt | llm | StrOutputParser()
+   ```
 ### 5. **Ejecución de la cadena**
 
-    ```
-    resultado = chain.invoke({"tema": "aprendizaje automático"})
-    print(resultado)
-    ```
+   ```
+   resultado = chain.invoke({"tema": "aprendizaje automático"})
+   print(resultado)
+   ```
 
 ## Instalación y Ejecución
 
